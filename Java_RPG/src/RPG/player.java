@@ -28,4 +28,19 @@ public class player {
 	{
 		return this.health; 
 	}
+	
+	public void setAttack(int attack)
+	{
+		this.attack = attack; 
+	}
+	
+	public void setDefense(int defense)
+	{
+		this.defense = defense; 
+	}
+	
+	public void setHealth(int health)
+	{
+		this.health = health; 
+	}
 }
