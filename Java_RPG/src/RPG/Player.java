@@ -3,7 +3,7 @@ package RPG;
 import java.util.Random;
 import java.util.ArrayList;
 
-public class player {
+public class Player {
 	
 	private String name;
 	
@@ -16,7 +16,7 @@ public class player {
 	private ArrayList<Item> inventory = new ArrayList<Item>(); // Creates an ArrayList that stores item objects
 	
 	// Constructs a player object and sets the name to the passed argument
-	public player(String name)
+	public Player(String name)
 	{
 		this.attack = 2;
 		this.defense = 1;
@@ -70,5 +70,10 @@ public class player {
 	public Item getItem(int index)
 	{
 		return inventory.get(index);
+	}
+	
+	public void levelUp()
+	{
+		playerLevel++;
 	}
 }

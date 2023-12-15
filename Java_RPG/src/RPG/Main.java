@@ -32,7 +32,7 @@ public class Main {
 			// Gets the player's name and sets it to a new player object
 			System.out.print("Enter your name: ");
 			name = scnr.next();
-			player player1 = new player(name); 
+			Player player1 = new Player(name); 
 			
 			// Game loop begins
 			while(alive == true)
@@ -50,7 +50,7 @@ public class Main {
 					
 				case 1:
 					System.out.print("You've encountered a monster!");
-					
+					player1.levelUp();
 				}
 				
 				room++; 
