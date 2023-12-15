@@ -8,6 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int TEST = 0;
+		int slot = 0;
 		Scanner scnr = new Scanner(System.in);
 		
 		String answer, name;
@@ -40,9 +41,10 @@ public class Main {
 				{
 				// Player finds a treasure and calls the treasure method in the player class
 				case 0:
-					System.out.print("You found a treasure!");
-					player1.obtainItem();
-					System.out.print(player1.getItem(0).getItemName());//FIXME
+					System.out.print("You found a treasure!\n");
+					System.out.print("You got a ");
+					player1.obtainWeapon();
+					player1.getItem(0).getNameAtSlot(0);//FIXME
 					alive = false;//FIXME
 					break;
 					

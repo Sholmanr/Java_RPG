@@ -13,7 +13,7 @@ public class player {
 	private int playerLevel = 1; // Initializes the player's level to 1 
 	private int itemNumber = 0;
 	
-	private ArrayList<item> inventory = new ArrayList<item>(); // Creates an ArrayList that stores item objects
+	private ArrayList<Item> inventory = new ArrayList<Item>(); // Creates an ArrayList that stores item objects
 	
 	// Constructs a player object and sets the name to the passed argument
 	public player(String name)
@@ -60,14 +60,14 @@ public class player {
 	}
 	
 	// Adds a new item to the player's inventory
-	public void obtainItem()
+	public void obtainWeapon()
 	{
 		Random rand = new Random();
-		item item = new item(playerLevel, rand.nextInt(3));
+		Item item = new Weapon(playerLevel, rand.nextInt(3));
 		inventory.add(item);
 	}
 	
-	public item getItem(int index)
+	public Item getItem(int index)
 	{
 		return inventory.get(index);
 	}
