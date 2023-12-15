@@ -51,6 +51,7 @@ public class Main {
 				case 1:
 					System.out.print("You've encountered a monster!");
 					player1.levelUp();
+					System.out.print("Monster defeated!");
 				}
 				
 				room++; 
