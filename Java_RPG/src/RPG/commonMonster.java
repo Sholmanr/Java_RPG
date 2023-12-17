@@ -1,6 +1,6 @@
 package RPG;
 
-public class commonMonster extends monster{
+public class commonMonster extends Monster{
 	
 	
 	commonMonster()
