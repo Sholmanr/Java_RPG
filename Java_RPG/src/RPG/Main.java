@@ -1,4 +1,6 @@
 package RPG;
+import Battle.Attack;
+
 
 import java.util.Scanner;
 import java.util.Random;
@@ -7,6 +9,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Attack.sayHi();
 		int TEST = 0;
 		int slot = 0;
 		Scanner scnr = new Scanner(System.in);
@@ -50,7 +53,7 @@ public class Main {
 					
 				case 1:
 					System.out.print("You've encountered a monster!");
-					Monster scary = new commonMonster();
+					Monster mon = new commonMonster();
 					player1.levelUp();
 					System.out.print("Monster defeated!");
 				}
