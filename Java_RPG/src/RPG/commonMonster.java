@@ -3,9 +3,9 @@ package RPG;
 public class commonMonster extends Monster{
 	
 	
-	commonMonster()
+	commonMonster(int playerLevel)
 	{
-		super(5, 10);
+		super(playerLevel + 5, playerLevel + 1);
 	}
 	
 }

@@ -72,6 +72,11 @@ public class Player {
 		return inventory.get(index);
 	}
 	
+	public int getLevel()
+	{
+		return this.playerLevel;
+	}
+	
 	public void levelUp()
 	{
 		playerLevel++;

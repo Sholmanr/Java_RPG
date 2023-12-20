@@ -1,16 +1,15 @@
 package RPG;
-import Battle.Attack;
-
-
 import java.util.Scanner;
-import java.util.Random;
 
+import GameLoop.Attack;
+
+import java.util.Random;
+ 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Attack.sayHi();
-		int TEST = 0;
+
+		int TEST = 1;// FIX ME 
 		int slot = 0;
 		Scanner scnr = new Scanner(System.in);
 		
@@ -47,15 +46,27 @@ public class Main {
 					System.out.print("You found a treasure!\n");
 					System.out.print("You got a ");
 					player1.obtainWeapon();
-					player1.getItem(0).getNameAtSlot(0);//FIXME
-					alive = false;//FIXME
 					break;
 					
 				case 1:
 					System.out.print("You've encountered a monster!");
-					Monster mon = new commonMonster();
-					player1.levelUp();
-					System.out.print("Monster defeated!");
+					Monster monster = new commonMonster(player1.getLevel());
+					Battle encounter = new Battle(player1, monster);
+					alive = encounter.fight();
+					if(alive == true)
+					{
+						System.out.print("Monster defeated!");
+						player1.levelUp();
+					}
+					else 
+					{
+						System.out.print("You were defeated!");
+					}
+					break;
+				
+				case 2: 
+					
+					break; 
 				}
 				
 				room++; 
@@ -69,6 +80,8 @@ public class Main {
 			scnr.close();
 		}
 	}
+	
+
 	
 
 }

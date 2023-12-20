@@ -1,4 +1,4 @@
-package Battle;
+package GameLoop;
 
 public class Attack {
 	
