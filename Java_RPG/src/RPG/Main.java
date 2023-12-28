@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int TEST = 1;// FIX ME 
+		int TEST = 1;// FIXME 
 		int slot = 0;
 		Scanner scnr = new Scanner(System.in);
 		
@@ -34,7 +34,7 @@ public class Main {
 			// Gets the player's name and sets it to a new player object
 			System.out.print("Enter your name: ");
 			name = scnr.next();
-			Player player1 = new Player(name); 
+			Player player1 = new Player(name);
 			
 			// Game loop begins
 			while(alive == true)

@@ -59,6 +59,22 @@ public class Player {
 		this.health = health; 
 	}
 	
+	public void healPlayer(int healAmount)
+	{
+		
+		Item testPotion = new Potion(2);// Can this be done better?
+		
+		if(containsObject(testPotion))
+		{
+			this.health += healAmount;
+			System.out.print("Works?");
+		}
+		else
+		{
+			System.out.print("You do not have any healing items!");
+		}
+	}
+	
 	// Adds a new item to the player's inventory
 	public void obtainWeapon()
 	{
@@ -81,4 +97,31 @@ public class Player {
 	{
 		playerLevel++;
 	}
+	
+	public boolean containsObject(Object target) 
+	{
+		if (target instanceof Potion) 
+		{
+			for(int i = 0; i < inventory.size(); i++)
+			{
+				if(inventory.get(i) instanceof Potion) 
+				{
+					return true;
+				}
+			}
+		}
+		else if (target instanceof Weapon) 
+		{
+			for(int i = 0; i < inventory.size(); i++)
+			{
+				if(inventory.get(i) instanceof Weapon)
+				{
+					return true;
+				}
+			}
+		}
+		return false; 
+	}
+	
+	
 }
